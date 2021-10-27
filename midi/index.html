@@ -17,6 +17,22 @@
   src="https://cdn.jsdelivr.net/gh/cifkao/html-midi-player@2b12128/twinkle_twinkle.mid">
 </midi-visualizer>
 
-<script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.22.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
+<script>
+navigator.requestMIDIAccess()
+  .then(function(access) {
 
-<p>For more information, see <a href="https://github.com/cifkao/html-midi-player" target="_blank">the <strong>html-midi-player</strong> repository</a> on GitHub.</p>
+     // Get lists of available MIDI controllers
+     const inputs = access.inputs.values();
+     const outputs = access.outputs.values();
+
+     access.onstatechange = function(e) {
+
+       // Print information about the (dis)connected MIDI controller
+       console.log(e.port.name, e.port.manufacturer, e.port.state);
+     };
+  });
+</script>
+
+<p>
+`${inputs}`
+</p>
