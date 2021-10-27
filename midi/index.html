@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html>
-	<script>
-		function listInputsAndOutputs( midiAccess ) {
-  for (var entry of midiAccess.inputs) {
-    var input = entry[1];
-    console.log( "Input port [type:'" + input.type + "'] id:'" + input.id +
-      "' manufacturer:'" + input.manufacturer + "' name:'" + input.name +
-      "' version:'" + input.version + "'" );
-  }
+	<div>
+  <h2>Simple MIDI API Example</h2>
 
-  for (var entry of midiAccess.outputs) {
-    var output = entry[1];
-    console.log( "Output port [type:'" + output.type + "'] id:'" + output.id +
-      "' manufacturer:'" + output.manufacturer + "' name:'" + output.name +
-      "' version:'" + output.version + "'" );
-  }
-}
-	</script>	
+  <p>Plug in your MIDI controller and see the data logged here</p>
+
+  <section id="midi-data">  
+    <ul></ul>
+  </section>
+</div>
 </html>
