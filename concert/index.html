@@ -1,105 +1,197 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta content="DF concert" property="og:title" />
         <meta content="You can request a token here for the df concert" property="og:description" />
         <meta content="RealTheDev.github.io/concert" property="og:url" />
         <meta content="https://cdn.discordapp.com/attachments/884096795091800084/904793760083378227/dfconcert.png" property="og:image" />
         <title>DF concert</title>
         <style>
+            .lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+        </style>
+        <style>
             html {
                 background-color: #181a1b;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 color: turquoise;
-                text-align:center;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                text-align: center;
             }
-       
-            h1 {
-                font-weight: 100;
+            
+            .box {
+                background-color: #ffffff;
+                color: turquoise;
+                border-radius: 5px;
+                margin: 0 auto;
+                margin-top: 2%;
+                width: 40%;
+                display: block;
+                padding: 25px;
             }
-         
-#req{
-width: 100%;
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-
-}
-#req:hover{
-
-background-color: #45a049;
-
-}
-input[type=text]
-{
-text-align:center;
-width: 100%;
-display:block;
- margin: 8px 0;
-    font-size:14pt;
-    border-radius: 4px;
-    background: #d9d9d9;
-    border: 1px solid #ccc;
-    padding: 12px 20px;
-box-sizing: border-box;
-}
-div.container {
-  margin: 0 auto;
-  text-align:center;
-  width: 40%;
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 25px;
-}
-div.space {
-  margin: 0 auto;
-  width: 40%;
-  border-radius: 5px;
-  background-color: #181a1b;
-  padding: 25px;
-}
+            input[type=text] {
+                display:block;
+                text-align: center;
+                background-color: white;
+                background: #d9d9d9;
+                border: 1px solid #ccc;
+                padding: 12px 20px;
+                border-radius: 5px;
+                width: 100%;
+                margin: 8px 0;
+                font-size:14pt;
+                box-sizing: border-box;
+            }
+            button {
+                background-color: #4CAF50;
+                border: none;
+                border-radius: 4px;
+                padding: 14px 20px;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 8px 0;
+                cursor: pointer;
+                margin-top: 10px;
+                width: 100%;
+            }
+            button:disabled {
+                background-color: #888;
+            }
+            button>.lds-ellipsis{
+                display: none;
+            }
+            button:disabled>.lds-ellipsis{
+                display: block;
+                margin: auto;
+            }
+            #error{
+                padding: 0px;
+                color: red;
+                margin-bottom: 0px;
+            }
+            #token {
+                font-family: Monospace;
+                font-size: 5vw;
+            }
         </style>
-        <body>
-
-            <h1>Df concert 2021</h1>
-<div class="container">
-<label for="discord">Discord ign</label>          
-<INPUT id ='discord' placeholder="Your discord" type="text">
-<label for="ign">Minecraft username</label>
-            <INPUT type="text" id ='ign' placeholder="Your minecraft username">
-            <button id='req' size="10" onclick="send()">Request token</button>
-</div>
-
-<div class="space">
-
-</div>
-<div class="container">
-<t>About us</t>
-<p style="color: gray">What is DF concert? - DF concert is a cool and interactive event that you can sign up for now</p>
-<p style="color: gray">When will the concert take place? - The concert will take place at December 19th 2021 19:00 PM EET</p>
-<p style="color: gray">What will the DF concert feature? - The full DF concert feature list is on our discord: <a href="https://discord.gg/j9g5rcEvce">Discord Link</a></p>
-
-</div>
-        
-</body>
-    <script>
- function send() {
-      var name = document.getElementById('discord').value
-      var minecraft = document.getElementById('ign').value
-      const request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/903013475268296844/ibCaJRQl_SPld94BU6-MYTTuPbRc2YAtiqWRPqKLB45eajPrmDF6TVLGgrSKjTZgB1jb");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      const params = {
-  "content": `${name}`+"\n"+`${minecraft}`,
-}
- request.send(JSON.stringify(params));
-}
-    </script>
+        <script>
+            function send(){
+                var name = document.getElementById('name').value;
+                if(/^\w+$/i.test(name) && name.length <= 16 && name.length >= 3){
+                    button = document.getElementById('button');
+                    button.disabled = true;
+                    console.log(name)
+                    fetch('https://RealGamesBot.georgerng.repl.co/concert', {
+                        method: "POST",
+                        body: JSON.stringify({"minecraft":name}),
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        }
+                    })
+                        .then(x => {
+                            if(!(x.ok)){
+                                throw "I've seen people say never throw a string, I did anyway, this should ALWAYS be caught."
+                            }
+                            return x.json()
+                        })
+                        .then(x => {
+                            
+                            document.getElementById('token').innerText = JSON.parse(x).token;
+                            document.getElementById('sign').style.display = 'none'
+                            document.getElementById('res').style.display = 'block'
+                            
+                        })
+                        .catch(x => {error.innerText = "An error occured while uploading."; error.style.display = "block"; button.disabled = false; console.error(x);});
+                }
+                else{
+                    error.innerText = "Make sure to enter a valid name!";
+                    error.style.display = "block";
+                }
+            }
+            function load(){
+                error = document.getElementById('error');
+                error.style.display = "none";
+            }
+        </script>
     </head>
+    <body onload="load()">
+        <h1>Df concert 2021</h1>
+        <div class="box">
+            <div id="sign">
+                <label for="name">Minecraft username</label>
+                <input id="name" type="text" autocomplete="off" placeholder="Your Minecraft Name">
+                <button id="button" onclick="send()">Submit<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></button>
+                <p id="error" onclick="error.style.display = 'none'">JavaScript isn't enabled.</p>
+            </div>
+            <div id="res" style="display: none;">
+                <h2>Your Token</h2>
+                <p id="token">placeholder</p>
+            </div>
+        </div>
+        <div id="aboutus" class="box">
+            <t>About us</t>
+            <p style="color: gray">What is DF concert? - DF concert is a cool and interactive event that you can sign up for now</p>
+            <p style="color: gray">When will the concert take place? - The concert will take place at December 19th 2021 19:00 PM EET</p>
+            <p style="color: gray">What will the DF concert feature? - The full DF concert feature list is on <a href="https://discord.gg/j9g5rcEvce">our discord</a></p>
+            
+            </div>
+    </body>
 </html>
