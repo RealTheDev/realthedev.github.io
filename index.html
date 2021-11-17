@@ -324,6 +324,21 @@ text-align:center
     <div class="context">
         <h1>RealTheDev</h1>
       <div class="buttons"> 
+          <div id="donate-button-container">
+<div id="donate-button"></div>
+<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+<script>
+PayPal.Donation.Button({
+env:'production',
+hosted_button_id:'ULKAWU5FLJ4D2',
+image: {
+src:'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
+alt:'Donate with PayPal button',
+title:'PayPal - The safer, easier way to pay online!',
+}
+}).render('#donate-button');
+</script>
+</div>
         <a class="button button1" href="https://discord.gg/j9g5rcEvce" target="_blank" style="text-decoration:none"><h2>Discord</h2></a>
         <a class="button button2" href="https://github.com/RealTheDev" target="_blank" style="text-decoration:none"><h2>GitHub</h2></a>
         <a class="button button3" href="https://namemc.com/profile/RealTheDev" target="_blank" style="text-decoration:none"><h2>NameMc</h2></a>
