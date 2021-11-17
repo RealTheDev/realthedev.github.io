@@ -158,13 +158,57 @@ body{
 
 }
 
+
+@media only screen and (max-width: 699px) {
+/* For phone: */
 .buttons {
 text-align: center;
-
-
-
+}
+.button {
+    border-radius: 4px;
+  transition-duration: 0.4s;
+  background-color: #6369ce;
+  color: white;
+  padding: 10px;    
+  margin:2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2vw;
+  opacity: 0.6;
+    filter: alpha(opacity=90);
+}
+.button:hover {
+  color: white;
+  background-color: #434aca;
+  opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+.me {
+font-size: 4vw;
+color:rgb(185, 185, 185);
+text-align:left;
+}
+.alsome {
+font-size: 4vw;
+color:rgb(185, 185, 185);   
+padding-left:20vw;
+}
+.quote {
+color:white;
+font-size:8vw;
+font-weight: 800;
+}
+.centered {
+text-align:center
+}
 }
 
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .buttons {
+text-align: center;
+}
 .button {
     border-radius: 8px;
   transition-duration: 0.4s;
@@ -179,36 +223,77 @@ text-align: center;
   opacity: 0.6;
     filter: alpha(opacity=90);
 }
-
 .button:hover {
   color: white;
   background-color: #434aca;
   opacity: 0.9;
     filter: alpha(opacity=90);
 }
-
 .me {
-    padding-left:1vw;
+padding-left:25vw;
 font-size: 2vw;
 color:rgb(185, 185, 185);
+text-align:left;
 }
 .alsome {
-
 font-size: 2vw;
 color:rgb(185, 185, 185);   
 padding-left:20vw;
 }
 .quote {
-
 color:white;
 font-size:4vw;
-
 font-weight: 800;
 }
 .centered {
 text-align:center
+}
+}
 
-
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .buttons {
+text-align: center;
+}
+.button {
+    border-radius: 8px;
+  transition-duration: 0.4s;
+  background-color: #6369ce;
+  color: white;
+  padding: 10px;    
+  margin:5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1vw;
+  opacity: 0.6;
+    filter: alpha(opacity=90);
+}
+.button:hover {
+  color: white;
+  background-color: #434aca;
+  opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+.me {
+padding-left:25vw;
+font-size: 2vw;
+color:rgb(185, 185, 185);
+text-align:left;
+}
+.alsome {
+font-size: 2vw;
+color:rgb(185, 185, 185);   
+padding-left:20vw;
+}
+.quote {
+color:white;
+font-size:4vw;
+font-weight: 800;
+}
+.centered {
+text-align:center
+}
 }
 
     </style>
