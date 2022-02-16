@@ -22,7 +22,7 @@ app.get('/:feed', async (req, res) => {
     .printText(req.params.feed, 40, 150)
     .toBuffer();
 
-    res.set({'Content-Type': 'image/png'})//setting content type as png image!
+
     
   document.getElementById(Img).innerHTML = new image
 
