@@ -1,0 +1,127 @@
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  html {
+   background-image: url('blurred-concert.png');
+   background-repeat: no-repeat;
+   background-size: cover 100%;
+   background-position: center center;
+   background-color: #181a1b;
+   color: turquoise;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   text-align: center;
+      }
+              
+              .box {
+                  background-color: rgba(0, 173, 185, 0.123);
+                  color: turquoise;
+                  border-radius: 5px;
+                  margin: 0 auto;
+                  margin-top: 2%;
+                  width: 40%;
+                  display: block;
+                  padding: 25px;
+              }
+              input[type=text] {
+                  display:block;
+                  text-align: center;
+                  background-color: white;
+                  background: #d9d9d9;
+                  border: 1px solid #ccc;
+                  padding: 12px 20px;
+                  border-radius: 5px;
+                  width: 100%;
+                  margin: 8px 0;
+                  font-size:14pt;
+                  box-sizing: border-box;
+              }
+              button {
+                  background-color: rgba(102, 255, 50, 0.233);
+                  border: none;
+                  border-radius: 4px;
+                  padding: 14px 20px;
+                  color: white;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin: 8px 0;
+                  cursor: pointer;
+                  margin-top: 10px;
+                  width: 100%;
+              }
+              button:hover {
+                background-color: rgba(102, 255, 200, 0.233);
+              }
+
+              button:disabled {
+                  background-color: #888;
+              }
+              button>.lds-ellipsis{
+                  display: none;
+              }
+              button:disabled>.lds-ellipsis{
+                  display: block;
+                  margin: auto;
+              }
+              #error{
+                  padding: 0px;
+                  color: red;
+                  margin-bottom: 0px;
+              }
+              #token {
+                  font-family: Monospace;
+                  font-size: 5vw;
+              }
