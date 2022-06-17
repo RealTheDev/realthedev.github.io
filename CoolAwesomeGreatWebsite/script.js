@@ -10,24 +10,24 @@ chk.addEventListener('change', () => {
 });
 
 if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    if (loadedSettings.darkmode != null && loadedSettings.darkmode != false){
+    if (!loadedSettings || !loadedSettings.hasOwnProperty("darkmode")){
         chk.checked = true
-        var settings = {
-            darkmode: chk.checked
-        };
-        localStorage.setItem('settings', JSON.stringify(settings));
-        toggleDark();
+        let event = new Event('change');
+        chk.dispatchEvent(event);
     }
 };
 
 function toggleDark() {
     if(JSON.parse(localStorage.getItem('settings')).darkmode){
-         document.body.classList.add('dark');
+        chk.checked = true
+        document.body.classList.add('dark');
         document.getElementById('toggle').classList.add('dark');
         document.getElementById('ball').classList.add('dark');
         } else{
+        chk.checked = false
         document.body.classList.remove('dark');
         document.getElementById('toggle').classList.remove('dark');
         document.getElementById('ball').classList.remove('dark');
         }
 }
+toggleDark();
