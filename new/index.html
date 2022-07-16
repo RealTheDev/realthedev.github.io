@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="https://RealTheDev.github.io/icon.png" property="og:image">
+    <!-- <meta content="https://RealTheDev.github.io/icon.png" property="og:image"> -->
     <script>
-      const metatag = document.querySelector('meta[property="og:image"]');
-      metatag.setAttribute("content", 'did it owrk?');
+      // const metatag = document.querySelector('meta[property="og:image"]');
+      // metatag.setAttribute("content", 'did it owrk?');
+      var meta = document.createElement('meta');
+      meta.setAttribute('property', 'og:image');
+      meta.setAttribute('content', 'abbcdef');
+      document.getElementsByTagName('head')[0].appendChild(meta);
     </script>
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
@@ -17,7 +21,7 @@
     <canvas id="canvas"></canvas>
     <div id="container">
     <p>RealTheDev</p>
-    <h6>v0.3</h6>
+    <h6>v0.4</h6>
     <!-- <div id="donate-button-container">
         <div id="donate-button"></div>
         <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8" data-uid-auto="f18609e874_mje6mdk6mjg"></script>

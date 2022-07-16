@@ -23,7 +23,6 @@ window.addEventListener('mousemove', (evt) =>{
 ctx.fillStyle = "red";
 ctx.font = "30px Verdana"
 ctx.fillText("A", 0, 30);
-console.log(metatag);
 class Particle {
     constructor(x, y){
         this.x = x;
