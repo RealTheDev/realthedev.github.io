@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(0,254,129);
+    overflow: hidden;
+}
+#canvas {
+    filter:url('#goo');
+    border: 2px solid black;
+}
+#container {
+    text-align: center;
+    position:absolute;
+    left:0;top:0;
+    width: 100vw;
+    height: 100vh;
+}
+p {
+   color: white;
+   font-family: Outfit; 
+   font-size: 30pt;
+   font-weight: 700;
+   top: 100%;
+}
