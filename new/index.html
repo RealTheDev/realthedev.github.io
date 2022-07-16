@@ -14,7 +14,7 @@
     <canvas id="canvas"></canvas>
     <div id="container">
     <p id="colorchange">RealTheDev</p>
-    <h6>v0.5t</h6>
+    <h6>v0.6t</h6>
     <!-- <div id="donate-button-container">
         <div id="donate-button"></div>
         <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8" data-uid-auto="f18609e874_mje6mdk6mjg"></script>
@@ -48,8 +48,12 @@
     document.getElementById('colorchange').style.color = urlParams.get('color');
     console.log(urlParams.get('color'));
     var meta = document.createElement('meta');
-    meta.setAttribute('property', 'og:description');
+    meta.setAttribute('property', 'og:title');
     meta.setAttribute('content', urlParams.get('color'));
     document.getElementsByTagName('head')[0].appendChild(meta);
+    var meta2 = document.createElement('meta2');
+    meta2.setAttribute('property', 'og:description');
+    meta2.setAttribute('content', urlParams.get('color'));
+    document.getElementsByTagName('head')[0].appendChild(meta2);
   </script>
 </html>
