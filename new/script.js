@@ -1,6 +1,3 @@
-const metatag = document.querySelector('meta[property="og:image"]');
-metatag.setAttribute("content", 'did it owrk?');
-
 const canvas = document.querySelector("#canvas");
 const ctx = canvas.getContext("2d");
 canvas.height = window.innerHeight;
