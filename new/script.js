@@ -1,3 +1,6 @@
+const metatag = document.querySelector('meta[property="og:image"]');
+metatag.setAttribute("content", 'did it owrk?');
+
 const canvas = document.querySelector("#canvas");
 const ctx = canvas.getContext("2d");
 canvas.height = window.innerHeight;
@@ -23,9 +26,6 @@ window.addEventListener('mousemove', (evt) =>{
 ctx.fillStyle = "red";
 ctx.font = "30px Verdana"
 ctx.fillText("A", 0, 30);
-const data = ctx.getImageData(0, 0, 100, 100);
-const metatag = document.querySelector('meta[property="og:image"]');
-metatag.setAttribute("content", 'sus');
 console.log(metatag);
 class Particle {
     constructor(x, y){

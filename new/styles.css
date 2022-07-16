@@ -25,5 +25,15 @@ p {
    font-family: Outfit; 
    font-size: 30pt;
    font-weight: 700;
-   top: 100%;
+   margin:100px;
+}
+
+h6 {
+    color: white;
+    font-family: Outfit;
+    font-size: 20pt;
+    font-weight: 400;
+    position:absolute;
+    right:1vw;
+    bottom:1vh
 }
