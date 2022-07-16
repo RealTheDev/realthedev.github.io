@@ -79,8 +79,6 @@ function init(){
         let y = Math.random() * canvas.height;
         particleArray.push(new Particle(x, y)); 
     }
-    // particleArray.push(new Particle(50, 50));
-    // particleArray.push(new Particle(80, 50));
 }
 init();
 console.log(particleArray);
@@ -94,4 +92,3 @@ function animate(){
     requestAnimationFrame(animate);
 }
 animate();
-// 35:00 minutes in, dont forget lmao
