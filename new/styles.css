@@ -81,3 +81,48 @@ a:hover {
 .spacer {
     margin: 80px;
 }
+@media only screen and (max-width: 800px) {
+    .center {
+        text-align:left;
+        margin: 0px;
+        width: 100%
+        }
+        h1 {
+            margin: 0.5vw;
+            color: lightgray;
+            font-family: Outfit;
+            font-size: 4vw;
+            font-weight: 500
+            }
+        h2 {
+            margin: 0.5vw;  
+            color: white;
+            font-family: Outfit;
+            font-size: 8vw;
+            font-weight: 700
+            }
+        h3 {
+            color: lightgray;
+            font-family: Outfit;
+            font-size: 4vw;
+            font-weight: 500;
+            margin: 0 0 0 32vw
+            }
+        .spacer {
+             margin: 110px;
+         }
+        #donate-button {
+            position:absolute;
+            left:0.5vw;
+            bottom:5vh
+        }
+        h6 {
+            color: white;
+            font-family: Outfit;
+            font-size: 20pt;
+            font-weight: 400;
+            position:absolute;
+            right:1vw;
+            bottom:8vh
+        }
+}
