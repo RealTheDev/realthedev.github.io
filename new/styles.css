@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-body {
+body, html {
     background: rgb(0,254,129);
     overflow: hidden;
 }
@@ -34,8 +34,8 @@ h6 {
     font-size: 20pt;
     font-weight: 400;
     position:absolute;
-    right:1vw;
-    bottom:1vh
+    right:8.5px;
+    bottom:0px
 }
 .center {
 text-align:left;
@@ -44,7 +44,7 @@ width: 80%
 }
 h1 {
 margin: 0 0 0 10vw;
-color: lightgray;
+color: #eee;
 font-family: Outfit;
 font-size: 25pt;
 font-weight: 500
@@ -57,7 +57,7 @@ font-size: 45pt;
 font-weight: 700
 }
 h3 {
-color: lightgray;
+color: #eee;
 font-family: Outfit;
 font-size: 25pt;
 font-weight: 500;
@@ -65,8 +65,8 @@ margin: 0 0 0 25vw
 }
 #donate-button {
     position:absolute;
-    left:0.5vw;
-    bottom:1vh
+    left:4.2px;
+    bottom:2px;
 }
 a {
     font-family: Outfit;
@@ -87,9 +87,12 @@ a:hover {
         margin: 0px;
         width: 100%
         }
+        p {
+            margin: 20px 0 0 0;
+        }
         h1 {
             margin: 0.5vw;
-            color: lightgray;
+            color: #eee;
             font-family: Outfit;
             font-size: 4vw;
             font-weight: 500
@@ -102,19 +105,19 @@ a:hover {
             font-weight: 700
             }
         h3 {
-            color: lightgray;
+            color: #eee;
             font-family: Outfit;
             font-size: 4vw;
             font-weight: 500;
             margin: 0 0 0 32vw
             }
         .spacer {
-             margin: 110px;
+             margin: 200px 0 0 0;
          }
         #donate-button {
             position:absolute;
             left:0.5vw;
-            bottom:5vh
+            bottom:30px;
         }
         h6 {
             color: white;
@@ -122,7 +125,7 @@ a:hover {
             font-size: 20pt;
             font-weight: 400;
             position:absolute;
-            right:1vw;
-            bottom:8vh
+            /* right:1vw; */
+            bottom:55px;
         }
 }

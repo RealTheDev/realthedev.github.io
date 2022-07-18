@@ -19,10 +19,23 @@ window.addEventListener('mousemove', (evt) =>{
   mouse.x = evt.x;
   mouse.y = evt.y;
 });
+window.addEventListener('touchmove', (evt) =>{
+    mouse.x = evt.touches[0].clientX;
+    mouse.y = evt.touches[0].clientY;
+});
+window.addEventListener('touchend', (evt) =>{
+    mouse.x = -69;
+    mouse.y = -69;
+});
+window.addEventListener('touchcancel', (evt) =>{
+    mouse.x = -69;
+    mouse.y = -69;
+});
+document.addEventListener('mouseleave', (evt) =>{
+    mouse.x = -69;
+    mouse.y = -69;
+});
 
-ctx.fillStyle = "red";
-ctx.font = "30px Verdana"
-ctx.fillText("A", 0, 30);
 class Particle {
     constructor(x, y){
         this.x = x;
@@ -73,15 +86,18 @@ class Particle {
 }
 
 function init(){
+    mouse.x = -69;
+    mouse.y = -69;
+    var parAmount = 800
+    if (window.matchMedia('(max-device-width: 800px)').matches) {parAmount = 400}
     particleArray = [];
-    for (let i = 0; i < 800; i++) {
+    for (let i = 0; i < parAmount; i++) {
         let x = Math.random() * canvas.width;
         let y = Math.random() * canvas.height;
         particleArray.push(new Particle(x, y)); 
     }
 }
 init();
-console.log(particleArray);
 
 function animate(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
