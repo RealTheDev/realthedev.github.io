@@ -89,7 +89,7 @@ function init(){
     mouse.x = -69;
     mouse.y = -69;
     var parAmount = 800
-    if (window.matchMedia('(max-device-width: 800px)').matches) {parAmount = 400}
+    if (window.matchMedia('(max-device-width: 800px)').matches) {parAmount = 250}
     particleArray = [];
     for (let i = 0; i < parAmount; i++) {
         let x = Math.random() * canvas.width;
