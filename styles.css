@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-body {
+body, html {
     background: rgb(0,254,129);
     overflow: hidden;
 }
@@ -25,5 +25,107 @@ p {
    font-family: Outfit; 
    font-size: 30pt;
    font-weight: 700;
-   top: 100%;
+   margin:50px 0 0 0;
+}
+
+h6 {
+    color: white;
+    font-family: Outfit;
+    font-size: 20pt;
+    font-weight: 400;
+    position:absolute;
+    right:8.5px;
+    bottom:0px
+}
+.center {
+text-align:left;
+margin: auto;
+width: 80%
+}
+h1 {
+margin: 0 0 0 10vw;
+color: #eee;
+font-family: Outfit;
+font-size: 25pt;
+font-weight: 500
+}
+h2 {
+margin: 0 0 0 10vw;  
+color: white;
+font-family: Outfit;
+font-size: 45pt;
+font-weight: 700
+}
+h3 {
+color: #eee;
+font-family: Outfit;
+font-size: 25pt;
+font-weight: 500;
+margin: 0 0 0 25vw
+}
+#donate-button {
+    position:absolute;
+    left:4.2px;
+    bottom:2px;
+}
+a {
+    font-family: Outfit;
+    font-size: 20pt;
+    font-weight: 600;
+    color:white;
+    margin: 10px;
+}
+a:hover {
+    color:#EEE
+}
+.spacer {
+    margin: 80px;
+}
+@media only screen and (max-width: 800px) {
+    .center {
+        text-align:left;
+        margin: 0px;
+        width: 100%
+        }
+        p {
+            margin: 20px 0 0 0;
+        }
+        h1 {
+            margin: 0.5vw;
+            color: #eee;
+            font-family: Outfit;
+            font-size: 4vw;
+            font-weight: 500
+            }
+        h2 {
+            margin: 0.5vw;  
+            color: white;
+            font-family: Outfit;
+            font-size: 8vw;
+            font-weight: 700
+            }
+        h3 {
+            color: #eee;
+            font-family: Outfit;
+            font-size: 4vw;
+            font-weight: 500;
+            margin: 0 0 0 32vw
+            }
+        .spacer {
+             margin: 200px 0 0 0;
+         }
+        #donate-button {
+            position:absolute;
+            left:0.5vw;
+            bottom:30px;
+        }
+        h6 {
+            color: white;
+            font-family: Outfit;
+            font-size: 20pt;
+            font-weight: 400;
+            position:absolute;
+            /* right:1vw; */
+            bottom:55px;
+        }
 }
