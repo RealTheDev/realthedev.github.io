@@ -47,14 +47,14 @@ class Particle {
             y: (Math.random() * 2) -1.9
         };
     }
-    draw(){
+    draw(lag){
         ctx.fillStyle = 'rgb(0,129,62)';
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.closePath();
         ctx.fill();
     }
-    update(){
+    update(lag){
         let dx = mouse.x -this.x;
         let dy = mouse.y -this.y;
         let distance = Math.sqrt(dx * dx + dy * dy);
@@ -62,8 +62,8 @@ class Particle {
         let forceDirectionX = dx / distance;
         let forceDirectionY = dy / distance;
         let force = (maxDistance - distance) / maxDistance;
-        let directionX = forceDirectionX * force * this.density;
-        let directionY = forceDirectionY * force * this.density;
+        let directionX = forceDirectionX * force * this.density * lag;
+        let directionY = forceDirectionY * force * this.density * lag;
         if(distance < mouse.radius){
             this.x -= directionX;
             this.y -= directionY;
@@ -80,8 +80,8 @@ class Particle {
         if(this.y < 0){
             this.vector.y = Math.abs(this.vector.y)
         }
-        this.x += this.vector.x * this.density * 0.05;
-        this.y += this.vector.y * this.density * 0.05;
+        this.x += this.vector.x * this.density * 0.05 * lag;
+        this.y += this.vector.y * this.density * 0.05 * lag;
     }
 }
 
@@ -101,10 +101,15 @@ init();
 
 function animate(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    var dif = Date.now() - lst;
+    lst = Date.now();     
+    lag = ((dif-25)/25)+1;
+    if(lag<0) lag=1;
     for (let i = 0; i < particleArray.length; i++){
-        particleArray[i].draw();
-        particleArray[i].update();
+        particleArray[i].draw(lag);
+        particleArray[i].update(lag);
     }
     requestAnimationFrame(animate);
 }
+lst = Date.now();
 animate();
