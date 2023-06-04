@@ -8,7 +8,7 @@ window.addEventListener('resize', () =>{
     });
 
 let particleArray = [];
-
+let sizemulti = 1;
 const mouse = {
     x: null,
     y: null,
@@ -40,15 +40,15 @@ class Particle {
     constructor(x, y){
         this.x = x;
         this.y = y;
-        this.size = Math.random() * 30;
+        this.size = Math.random() * 30 * sizemulti;
         this.density = (Math.random() * 20) + 5;
         this.vector = {
-            x: (Math.random() * 2) -1.9,
-            y: (Math.random() * 2) -1.9
+            x: (Math.random() * 4) -2,
+            y: (Math.random() * 4) -2
         };
     }
     draw(lag){
-        ctx.fillStyle = 'rgb(0,129,62)';
+        ctx.fillStyle = 'rgb(50,250,100)';
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.closePath();
@@ -65,8 +65,8 @@ class Particle {
         let directionX = forceDirectionX * force * this.density * lag;
         let directionY = forceDirectionY * force * this.density * lag;
         if(distance < mouse.radius){
-            this.x -= directionX;
-            this.y -= directionY;
+            this.x -= directionX*2;
+            this.y -= directionY*2;
         } 
         if(this.x > canvas.width){
             this.vector.x = 0 - Math.abs(this.vector.x)
@@ -88,8 +88,8 @@ class Particle {
 function init(){
     mouse.x = -69;
     mouse.y = -69;
-    var parAmount = 800
-    if (window.matchMedia('(max-device-width: 800px)').matches) {parAmount = 250}
+    var parAmount = 200
+    if (window.matchMedia('(max-device-width: 700px)').matches) {parAmount = 40; sizemulti=2}
     particleArray = [];
     for (let i = 0; i < parAmount; i++) {
         let x = Math.random() * canvas.width;
@@ -110,6 +110,7 @@ function animate(){
         particleArray[i].update(lag);
     }
     requestAnimationFrame(animate);
+    if(lag>50) lag=50;
 }
 lst = Date.now();
 animate();
