@@ -21,3 +21,10 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.instagram {
+    font-size:10vw;
+    text-decoration:none;
+    color:#ffffff;
+    margin-left:45vw;
+}

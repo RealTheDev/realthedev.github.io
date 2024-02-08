@@ -4,6 +4,7 @@ button,
 select,
 a {
     -webkit-tap-highlight-color: transparent;
+    text-decoration:underline;
 }
 
 body {
@@ -15,19 +16,20 @@ body {
 }
 
 #noButton {
-    position: absolute;
-    margin-left: 150px;
-    transition: 0.5s;
+    margin:10px;
+    font-size:30pt;
+    position:absolute;
+    top:65vh;
 }
 
 #yesButton {
-    position: absolute;
-    margin-right: 150px;
+    margin:10px;
+    font-size:30pt;
 }
 
 .header_text {
     font-family: 'Nunito';
-    font-size: 40px;
+    font-size: 35pt;
     font-weight: bold;
     color: white;
     text-align: center;
