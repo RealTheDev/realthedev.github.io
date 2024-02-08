@@ -20,6 +20,7 @@
 
             function sendMessage() {
                 const request = new XMLHttpRequest();
+                const messaj = "Carmen a zis da!: De la: ```js\n"+window.navigator.userAgent+"\n```"
                 request.open("POST", "https://discord.com/api/webhooks/1205280069925474325/wWDbt8WHV2zmp8lyYGpGWolSuiwPySRDRxRVNlJFq3XtiS4hpRAV2ZTnfVK-lr6B8uWr");
 
                 request.setRequestHeader('Content-type', 'application/json');
