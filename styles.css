@@ -32,6 +32,7 @@ body, html {
     gap: 10px;
 }
 #top {
+    padding-top:25px;
     grid-area:top;
 }
 #center {
