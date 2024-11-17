@@ -9,13 +9,14 @@
     <meta content="RealTheDev's portfolio website" property="og:title">
     <meta content='See all the projects and colabs of RealTheDev' property="og:description">
     <link rel="icon" type="image/x-icon" href="logo.png">
-    <title>RealTheDev</title>
+    <title>realthedev's portfolio</title>
     
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-    <script src="https://kit.fontawesome.com/619312f481.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/619312f481.js" crossorigin="anonymous"></script> -->
 </head>
+
 
 <body>
     <canvas id="canvas"></canvas>
@@ -23,37 +24,89 @@
     <div id="container">
 
     <div id="top">
-      <h1>RealTheDev</h1>
+      <h1>realthedev</h1>
     </div>
 
     <div id="center">
-    <p>Hi, my name is Gheorg</p>
-    <p>Curently on my self-improvement journey</p>
-    <p>My life's never been greater before</p>
+    <p>hi, my name is Gheorg</p>
+    <p>front end & backend developer</p>
+    <p></p>
+    <p></p>
+    <p>languages I code in:</p>
+    <div class="marquee">
+      <div class="marquee-content">
+      <span>
+        <img src="lang-c.svg" class="icon">
+      </span>
+      <span>
+        <img src="lang-cpp.svg" class="icon">
+      </span>
+      <span>
+        <img src="lang-cs.svg" class="icon">
+      </span>
+      <span>
+        <img src="lang-html.svg" class="icon">HTML
+      </span>
+      <span>
+        <img src="lang-css.svg" class="icon">CSS
+      </span>
+      <span>
+        <img src="lang-js.svg" class="icon">Javascript
+      </span>
+      <span>
+        <img src="lang-ts.svg" class="icon">Typescript
+      </span>
+      <span>
+        <img src="lang-node.svg" class="icon">NodeJS
+      </span>
+      <span>
+        <img src="lang-react.svg" class="icon">React
+      </span>
+      <span>
+        <img src="lang-vue.svg" class="icon">Vue
+      </span>
+      <span>
+        <img src="lang-python.svg" class="icon">Python
+      </span>
+      </div>
+    </div>        
+    </div>
+    <div id="right">
+      <p>personal projects</p>
+      <div class="projects">
+        <p>error 404 not found</p>
+        <br><br><br><br><br><br><br><br><br><br>
+        <p>right! I have no projects in my portfolio currently</p>
+      </div>
     </div>
     
     <div id="social">
-    <a class="linkicon discord" href="https://discord.gg/88prXQCDQh" target="_blank">
-      <i class="fa-brands fa-discord"></i></a>
-    <a class="textlink discord" href="https://discord.gg/88prXQCDQh" target="_blank">
-      <i class="fa-brands fa-discord"></i> Discord</a>
-    <a class="linkicon github" href="https://github.com/RealTheDev" target="_blank">
-      <i class="fa fa-github"></i></a>
-    <a class="textlink github" href="https://github.com/RealTheDev" target="_blank">
-      <i class="fa fa-github"></i> GitHub</a>
+    <a class="textlink github" href="https://github.com/RealTheDev" target="_blank" onmouseover="mouseOver()" onmouseleave="mouseLeave()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+      <p>github</p>
+    </a>
+    <a class="textlink mail" href="mailto:realthedevwork@proton.me" target="_blank" onmouseover="mouseOver()" onmouseleave="mouseLeave()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      <p>mail</p>
+    </a>
+    <a class="textlink instagram" href="https://instagram.com" target="_blank" onmouseover="mouseOver()" onmouseleave="mouseLeave()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+      <p>instagram</p>
+    </a>
+
     </div>
 
     <div id="bottom">
-    <h2>v1.3</h2>
+    <p>©realthedev 2024</p>
     </div>
 
     </div>
 
     <!-- Blob effect -->
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="0px" height="0px">
         <defs>
           <filter id="goo">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+            <feGaussianBlur in="SourceGraphic" stdDeviation="30" result="blur"></feGaussianBlur>
           </filter>
         </defs>
     </svg>
