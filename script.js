@@ -1,8 +1,5 @@
 const canvas = document.querySelector("#canvas");
 const ctx = canvas.getContext("2d");
-canvas.height=Math.max( document.body.scrollHeight, document.body.offsetHeight, 
-    document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
-canvas.width = window.innerWidth;
 let lastKnownScrollPosition=0;
 window.addEventListener('resize', () =>{
     // canvas.height = window.innerHeight;
@@ -40,6 +37,7 @@ const mouse = {
       const totalWidth = marquee.scrollWidth;
       marquee.style.width = `${totalWidth}px`;
     });
+    init();
   });
 
 // var rightJS = {
@@ -179,6 +177,9 @@ class Particle {
 }
 
 function init(){
+    canvas.height=Math.max( document.body.scrollHeight, document.body.offsetHeight, 
+        document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
+    canvas.width = window.innerWidth;
     mouse.x = -69;
     mouse.y = -69;
     var parAmount = 200
@@ -191,7 +192,6 @@ function init(){
     }
     particleArray.push(new Particle(0, 0, true));
 }
-init();
 
 function animate(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
