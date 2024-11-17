@@ -101,7 +101,7 @@ span {
     flex-direction: column;
     justify-content:flex-start;
     gap:20px;
-    padding-right:50px;
+    padding-right:40px;
     padding-bottom:50px;
 }
 .projects {
@@ -180,11 +180,23 @@ a:hover {
     font-size:35px;
 }
 /* Mobile */
-@media only screen and (max-width: 600px) {
-    .textlink{
-        display:none;
+@media only screen and (max-width: 800px) {
+    #container {
+        grid-template-areas:
+        'top top top top'
+        'center center center center'
+        'center center center center'
+        'center center center center'
+        'right right right right'
+        'social social social social'
+        'bottom bottom bottom bottom';
     }
-    .linkicon{
-        display:grid;
+    #right {
+        padding-left:40px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .textlink > p{
+        display:none;
     }
 }
